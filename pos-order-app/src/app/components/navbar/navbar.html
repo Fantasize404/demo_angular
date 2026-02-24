@@ -1,0 +1,7 @@
+<div class="nav-section">
+  @for (c of service.categories; track c) {
+    <button (click)="service.setCategory(c)">
+      {{ c }}
+    </button>
+  }
+</div>

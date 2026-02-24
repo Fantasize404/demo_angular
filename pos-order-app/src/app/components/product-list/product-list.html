@@ -1,0 +1,7 @@
+<div class="product-list">
+  @for (p of service.filteredProducts(); track p.name) {
+    <button (click)="service.addOrder(p)">
+      {{ p.name }} - ${{ p.price }}
+    </button>
+  }
+</div>

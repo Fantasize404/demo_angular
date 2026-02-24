@@ -1,0 +1,11 @@
+<div class="num-pad">
+  <div>數量: {{ service.selectedQty() }}</div>
+
+  @for (n of numbers; track n) {
+    <button (click)="input(n)">
+      {{ n }}
+    </button>
+  }
+
+  <button (click)="clear()">C</button>
+</div>

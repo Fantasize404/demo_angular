@@ -1,0 +1,21 @@
+<div class="order-summary">
+  <h3>訂單明細</h3>
+
+  @if (service.orders().length === 0) {
+    <div>目前沒有訂單</div>
+  }
+
+  @for (o of service.orders(); track o.name) {
+    <div>
+      {{ o.name }} x {{ o.qty }} = ${{ o.qty * o.price }}
+    </div>
+  }
+
+  <hr>
+
+  <div>總計: ${{ service.total() }}</div>
+
+  <button (click)="service.clearOrders()">
+    清空訂單
+  </button>
+</div>
